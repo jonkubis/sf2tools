@@ -555,53 +555,7 @@ class SF2PresetDataChunk(object):
 		toexport.extend(b'\x00' * 12)
 			
 		return toexport
-		
-		#currentpreset = 0
-		#lets do the hierarchical assignment of zones and generators
-		#for x in range(len(self.presetzones)):
-		#	if (self.presets[currentpreset].bagindex == x): #this preset bag matches current preset
-		#		self.presets[currentpreset].zones.append(self.presetzones[x])
-		#	elif (self.presets[currentpreset+1].bagindex == x): #this preset bag matches next preset
-		#		currentpreset += 1
-		#		self.presets[currentpreset].zones.append(self.presetzones[x])
-		#	else:
-		#		self.presets[currentpreset].zones.append(self.presetzones[x]) #must be part of the current preset, but not the next one
-
-		#for x in range(1,len(self.presets)):
-			#self.presets[x-1].zonecount = self.presets[x].bagindex - self.presets[x-1].bagindex
-		
-		#for x in self.presets:
-		#	print (str(x.bank) + " - " + str(x.number) + " - '" + x.name.strip() + "' (" + str(x.bagindex) + ") zones = " + str(len(x.zones)))
-		#	zonecounter = 0
-		#	for zone in x.zones:
-		#		zonecounter += 1
-		#		print ("Zone #" + str(zonecounter) + ":")
-		#		for gen in zone.generators:
-		#			
-		#			if (gen.operator == 41):
-		#				print (" --> Instrument: " + self.instruments[gen.amount].name)
-		#			else:
-		#				print ("Operator: " + str(gen.operator) + ", Amount: " + str(gen.amount))
-		
-		#for x in self.instruments:
-		#	print ("'" + x.name.strip() + "' (" + str(x.bagindex) + ") zones = " + str(len(x.zones)))
-		#	zonecounter = 0
-		#	for zone in x.zones:
-		#		zonecounter += 1
-		#		print ("Zone #" + str(zonecounter) + ":")
-		#		for gen in zone.generators:
-		#			if (gen.operator == 53):
-		#				print (" --> Sample: '" + self.samples[gen.amount].name + "'")
-		#			elif (gen.operator == 43):
-		#				print (" --> Key Range: " + str(gen.amountrangel) + " - " + str(gen.amountrangeh))
-		#			elif (gen.operator == 44):
-		#				print (" --> Vel Range: " + str(gen.amountrangel) + " - " + str(gen.amountrangeh))	
-		#			else:
-		#				print ("Operator: " + str(gen.operator) + "(" + generatorEnumerators[gen.operator] + "), Amount: " + str(gen.amount))
-		
-				
-		
-				
+					
 		
 class SF2Preset(object):
 	firstinstrument = None
